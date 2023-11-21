@@ -1,1 +1,2 @@
-lprint("hello world")
+print("hello world")
+print("this is test")
