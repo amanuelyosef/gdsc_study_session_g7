@@ -9,50 +9,42 @@ void main() {
   
 }
 
-int findMaximum(List<int> lst){
-    int max=0;
-    
-    for(int i=0; i<lst.length; i++ ){
-      if (max<lst[i]){
-        max=lst[i];
-      }
+int findMaximum(List<int> lst) {
+  int max = 0;
+  for (int number in lst) {
+    if (number > max) {
+      max = number;
     }
-    
-    return max;   
-}
-
-
-int findMinimum(List<int> lst){
-    int min=0;
-    
-    for(int i=0; i<lst.length; i++ ){
-      if (min<lst[i]){
-        min=lst[i];
-      }
-    }
-    
-    return min;   
-}
-
-
-
-int calculateSum(List<int> lst){
-  int sum=0;
-  
-  for (int i=0; i<lst.length; i++){
-    sum+=lst[i];
   }
-  
-  return sum;
+
+  return max;
 }
 
+int findMinimum(List<int> lst) {
+  int min = lst[1];
+  for (int number in lst) {
+    if (number < min){
+      min = number;
+    } 
+  }
 
-double calculateAverage(List<int> lst){
-  double ave;
-  int leng=lst.length;
-  int total=calculateSum(lst);
-  
-  ave=total/leng;
-  
-  return ave;
+  return min;
+}
+
+int calculateSum(List<int> lst) {
+  int max = 0;
+  for (int number in lst) {
+    max += number;
+  }
+
+  return max;
+}
+
+double calculateAverage(List<int> lst) {
+  int max = 0;
+  for (int number in lst) {
+    max += number;
+  }
+
+  return max / lst.length;
 }
